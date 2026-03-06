@@ -60,13 +60,51 @@ const OfferSection = () => {
             </div>
 
             {/* --- SECTION 3: Yellow Audit Banner --- */}
-            <div className="w-100 container px-3 mt-4 mb-5">
-                <img
-                    src="/images/Frame 31.png"
-                    alt="Audit Banner"
-                    className="w-100 h-auto d-block mx-auto"
-                    style={{ objectFit: 'contain' }}
-                />
+            <div className="w-100 container px-3 mb-5 mt-4">
+                <div className="row g-0 align-items-center rounded-4 position-relative overflow-hidden shadow-sm" style={{ backgroundColor: '#fde047' }}>
+
+                    {/* Content Left */}
+                    <div className="col-12 col-md-8 p-4 p-md-5 position-relative" style={{ zIndex: 2 }}>
+                        <h2 className="fw-bold text-dark mb-4" style={{ fontSize: '2.4rem', lineHeight: '1.25', letterSpacing: '-0.02em', color: '#1f2937' }}>
+                            How we solve the problem and<br />
+                            what is our solution?
+                        </h2>
+
+                        <div className="text-dark mb-5" style={{ fontSize: '1.25rem', lineHeight: '1.6', color: '#374151' }}>
+                            <p className="mb-2 pe-md-5">Take this quick audit and<br className="d-none d-sm-block" /> we'll show you.</p>
+                            <ul className="mb-0 ps-3" style={{ listStyleType: 'disc' }}>
+                                <li className="mb-2">It's completely free</li>
+                                <li className="mb-2">Only takes about 90 seconds</li>
+                                <li className="mb-0">Get a tailored action report</li>
+                            </ul>
+                        </div>
+
+                        <button className="btn rounded-pill fw-bold d-flex align-items-center justify-content-center shadow-sm" style={{ backgroundColor: '#000', color: '#fde047', padding: '14px 32px', fontSize: '15px', width: 'fit-content' }}>
+                            Book a 30 mins Strategy Call
+                            <svg className="ms-2" style={{ width: '16px', height: '16px' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </button>
+                    </div>
+
+                    {/* Image Right */}
+                    <div className="col-12 col-md-4 d-flex justify-content-end align-items-end position-absolute h-100 end-0 bottom-0 d-none d-md-flex pointer-events-none" style={{ pointerEvents: 'none' }}>
+                        <img
+                            src="/images/img.png"
+                            alt="Audit Magnifying Glass"
+                            className="img-fluid"
+                            style={{
+                                maxWidth: '140%',
+                                objectFit: 'contain',
+                                objectPosition: 'bottom right',
+                                position: 'absolute',
+                                bottom: 0,
+                                right: '-5%',
+                                maxHeight: '110%'
+                            }}
+                        />
+                    </div>
+                </div>
             </div>
 
         </div>
