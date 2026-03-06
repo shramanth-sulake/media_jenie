@@ -2,7 +2,7 @@ import React from 'react';
 
 const HeroSection = () => {
     return (
-        <div className="min-vh-100 w-100 bg-white d-flex flex-column">
+        <div className="w-100 bg-white d-flex flex-column">
             {/* Header */}
             <header className="w-100 px-4 px-md-5 py-4 d-flex justify-content-start">
                 <img
@@ -13,13 +13,13 @@ const HeroSection = () => {
             </header>
 
             {/* Main Content */}
-            <main className="flex-grow-1 w-100 container d-flex flex-column align-items-center justify-content-center pt-4 pb-5 text-center">
-                <h1 className="fw-bold text-dark mb-4" style={{ fontSize: '2.5rem', lineHeight: '1.15', letterSpacing: '-0.02em', '@media (minWidth: 768px)': { fontSize: '4rem' } }}>
+            <main className="w-100 container d-flex flex-column align-items-center justify-content-center text-center" style={{ paddingTop: '4.5rem', paddingBottom: '4.5rem' }}>
+                <h1 className="fw-bold text-dark mb-4" style={{ fontSize: '3.5rem', lineHeight: '1.15', letterSpacing: '-0.02em' }}>
                     Hero: Frustrated with low <br className="d-none d-md-block" />
                     quality & less leads?
                 </h1>
 
-                <p className="mb-5" style={{ fontSize: '1.25rem', color: '#4b5563', maxWidth: '850px', lineHeight: '1.6' }}>
+                <p className="mb-5" style={{ fontSize: '1.5rem', color: '#4b5563', maxWidth: '850px', lineHeight: '1.6' }}>
                     Explanation Block: We help organizations <strong className="fw-semibold text-dark">generate predictable <br className="d-none d-md-block" />
                         leads</strong> through our Proprietary <strong className="fw-semibold text-dark">Decision-Science Framework</strong>
                 </p>

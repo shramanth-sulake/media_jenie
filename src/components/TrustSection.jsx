@@ -1,6 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
+
+const testimonials = [
+    {
+        quote: '"Thanks for turning out 3 lovely videos in Kannada on Cervical cancer. Your team was very responsive to our feedback and took action in a short time. We appreciate the professionalism shown and hope to work with you again in the future."',
+        name: 'Kanchan Bannerjee',
+        title: 'Hon Secretary',
+        org: 'ICS',
+        avatar: 'https://ui-avatars.com/api/?name=Kanchan+Bannerjee&background=ec4899&color=fff&rounded=true'
+    },
+    {
+        quote: '"Working with MediaJenie has been a game changer for us. Their team understood our brand voice immediately and delivered high-quality content consistently. We saw a notable spike in engagement within just the first month."',
+        name: 'Rajiv Sharma',
+        title: 'Marketing Director',
+        org: 'Happilo',
+        avatar: 'https://ui-avatars.com/api/?name=Rajiv+Sharma&background=4f46e5&color=fff&rounded=true'
+    }
+];
 
 const TrustSection = () => {
+    const [activeIndex, setActiveIndex] = useState(0);
+
+    const prev = () => setActiveIndex(i => (i === 0 ? testimonials.length - 1 : i - 1));
+    const next = () => setActiveIndex(i => (i === testimonials.length - 1 ? 0 : i + 1));
+
+    const t = testimonials[activeIndex];
+
     return (
         <div className="w-100 bg-white py-5 d-flex flex-column align-items-center font-sans">
 
@@ -11,15 +35,27 @@ const TrustSection = () => {
                 </h2>
             </div>
 
-            {/* Logo Carousel Border Section */}
-            <div className="w-100 border-top border-bottom py-4 mb-5" style={{ borderColor: '#eef0f2' }}>
-                <div className="container px-4 overflow-hidden" style={{ maxWidth: '1000px' }}>
-                    {/* Rather than building a full slider, we render the provided group image which seems to be the logo strip */}
+            {/* Logo Carousel Border Section — Infinite Marquee */}
+            <div className="w-100 border-top border-bottom py-4 mb-5 overflow-hidden" style={{ borderColor: '#eef0f2' }}>
+                <div
+                    style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        animation: 'marquee 18s linear infinite',
+                        width: 'max-content'
+                    }}
+                >
                     <img
                         src="/images/Group 1.png"
                         alt="Client Logos"
-                        className="w-100 h-auto"
-                        style={{ objectFit: 'contain' }}
+                        style={{ height: '48px', objectFit: 'contain', flexShrink: 0, paddingRight: '60px' }}
+                        onError={(e) => { e.target.style.display = 'none'; }}
+                    />
+                    <img
+                        src="/images/Group 1.png"
+                        alt="Client Logos"
+                        aria-hidden="true"
+                        style={{ height: '48px', objectFit: 'contain', flexShrink: 0, paddingRight: '60px' }}
                         onError={(e) => { e.target.style.display = 'none'; }}
                     />
                 </div>
@@ -33,41 +69,77 @@ const TrustSection = () => {
                     <h3 className="fw-bold mb-4" style={{ fontSize: '1.4rem', color: '#6c757d' }}>Clients Speak</h3>
 
                     <div className="row g-4 align-items-center mt-3">
+                        {/* Quote + Navigation */}
                         <div className="col-12 col-md-7 pe-md-5">
-                            <p className="fw-medium mb-4" style={{ fontSize: '1.05rem', color: '#444', lineHeight: '1.6' }}>
-                                "Thanks for turning out 3 lovely videos in Kannada on Cervical cancer. Your team was very responsive to our feedback and took action in a short time. We appreciate the professionalism shown and hope to work with you again in the future."
+                            <p
+                                className="fw-medium mb-4"
+                                style={{ fontSize: '1.05rem', color: '#444', lineHeight: '1.6', minHeight: '120px', transition: 'opacity 0.3s ease' }}
+                            >
+                                {t.quote}
                             </p>
 
-                            <div className="d-flex gap-3 mt-4">
-                                <button className="btn btn-link p-0 text-dark opacity-75" style={{ transition: 'opacity 0.2s', ':hover': { opacity: '1' } }}>
-                                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            {/* Arrows + dot indicators */}
+                            <div className="d-flex align-items-center gap-3 mt-4">
+                                <button
+                                    onClick={prev}
+                                    className="btn p-0 d-flex align-items-center justify-content-center rounded-circle border border-secondary"
+                                    style={{ width: '36px', height: '36px', backgroundColor: '#fff', transition: 'all 0.2s' }}
+                                    onMouseEnter={e => { e.currentTarget.style.backgroundColor = '#000'; e.currentTarget.style.borderColor = '#000'; e.currentTarget.querySelector('svg').setAttribute('stroke', '#fff'); }}
+                                    onMouseLeave={e => { e.currentTarget.style.backgroundColor = '#fff'; e.currentTarget.style.borderColor = '#6c757d'; e.currentTarget.querySelector('svg').setAttribute('stroke', '#000'); }}
+                                >
+                                    <svg width="16" height="16" fill="none" stroke="#000" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
                                     </svg>
                                 </button>
-                                <button className="btn btn-link p-0 text-dark opacity-100">
-                                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+                                <button
+                                    onClick={next}
+                                    className="btn p-0 d-flex align-items-center justify-content-center rounded-circle border border-secondary"
+                                    style={{ width: '36px', height: '36px', backgroundColor: '#fff', transition: 'all 0.2s' }}
+                                    onMouseEnter={e => { e.currentTarget.style.backgroundColor = '#000'; e.currentTarget.style.borderColor = '#000'; e.currentTarget.querySelector('svg').setAttribute('stroke', '#fff'); }}
+                                    onMouseLeave={e => { e.currentTarget.style.backgroundColor = '#fff'; e.currentTarget.style.borderColor = '#6c757d'; e.currentTarget.querySelector('svg').setAttribute('stroke', '#000'); }}
+                                >
+                                    <svg width="16" height="16" fill="none" stroke="#000" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                                     </svg>
                                 </button>
+
+                                {/* Dot indicators */}
+                                <div className="d-flex gap-2 ms-2">
+                                    {testimonials.map((_, i) => (
+                                        <button
+                                            key={i}
+                                            onClick={() => setActiveIndex(i)}
+                                            className="btn p-0 rounded-circle border-0"
+                                            style={{
+                                                width: '8px',
+                                                height: '8px',
+                                                backgroundColor: i === activeIndex ? '#000' : '#d5d5d5',
+                                                transition: 'background-color 0.2s'
+                                            }}
+                                        />
+                                    ))}
+                                </div>
                             </div>
                         </div>
 
+                        {/* Author card */}
                         <div className="col-12 col-md-5 position-relative ps-md-5">
                             {/* Vertical divider on desktop */}
                             <div className="d-none d-md-block position-absolute bg-light h-100" style={{ width: '2px', left: 0, top: 0 }}></div>
 
                             <div className="d-flex align-items-center gap-3">
                                 <img
-                                    src="https://ui-avatars.com/api/?name=Kanchan+Bannerjee&background=ec4899&color=fff&rounded=true"
-                                    alt="Kanchan Bannerjee"
+                                    src={t.avatar}
+                                    alt={t.name}
                                     className="rounded-circle"
-                                    style={{ width: '64px', height: '64px', objectFit: 'cover' }}
+                                    style={{ width: '64px', height: '64px', objectFit: 'cover', flexShrink: 0 }}
                                 />
                                 <div>
-                                    <h5 className="fw-bold mb-1 text-dark" style={{ fontSize: '1rem' }}>Kanchan Bannerjee</h5>
+                                    <h5 className="fw-bold mb-1 text-dark" style={{ fontSize: '1rem' }}>{t.name}</h5>
                                     <p className="text-secondary mb-0 fst-italic" style={{ fontSize: '0.85rem', lineHeight: '1.3' }}>
-                                        Hon Secretary<br />
-                                        <span style={{ fontStyle: 'normal' }}>ICS</span>
+                                        {t.title}<br />
+                                        <span style={{ fontStyle: 'normal' }}>{t.org}</span>
                                     </p>
                                 </div>
                             </div>
