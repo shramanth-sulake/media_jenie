@@ -6,26 +6,29 @@ const OfferSection = () => {
 
             {/* --- SECTION 1: Top Image Background --- */}
             <div className="w-100 d-flex flex-column align-items-center">
-                <div
-                    className="w-100 position-relative d-flex justify-content-center"
-                    style={{
-                        backgroundImage: 'url("/images/image 44.png")',
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                        backgroundRepeat: 'no-repeat',
-                        minHeight: '450px',
-                        height: '55vh'
-                    }}
-                >
+                <div className="w-100 px-4 px-md-5">
+                    <div
+                        className="w-100 position-relative d-flex justify-content-center"
+                        style={{
+                            backgroundImage: 'url("/images/image 44.png")',
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center',
+                            backgroundRepeat: 'no-repeat',
+                            minHeight: '450px',
+                            height: '55vh',
+                            borderRadius: '0px'
+                        }}
+                    >
+                    </div>
                 </div>
 
                 {/* Overlapping White Card */}
-                <div className="w-100 container px-3 position-relative" style={{ zIndex: 20, marginTop: '-8rem' }}>
+                <div className="w-100 container position-relative" style={{ zIndex: 20, marginTop: '-8rem', paddingLeft: '8rem', paddingRight: '8rem' }}>
                     <div className="bg-white p-4 p-md-5 border-md-0 border shadow-sm" style={{ boxShadow: '0px 15px 60px rgba(0,0,0,0.1) !important' }}>
                         <h2 className="fw-bold text-dark mb-4" style={{ fontSize: '2.5rem', lineHeight: '1.25', letterSpacing: '-0.02em' }}>
                             Offer/ Value/ Solution: How is our <br className="d-none d-md-block" /> lead-generation service unique?
                         </h2>
-                        <div className="mb-5 text-secondary" style={{ fontSize: '1.1rem', lineHeight: '1.6', maxWidth: '900px' }}>
+                        <div className="mb-5 text-secondary mt-4" style={{ fontSize: '1.1rem', lineHeight: '1.6', maxWidth: '500px', marginTop: '2rem' }}>
                             <p className="mb-4">
                                 Most lead-gen programs focus on channels, and activities, assuming intent-of-buying.
                             </p>
@@ -50,7 +53,7 @@ const OfferSection = () => {
             </div>
 
             {/* --- SECTION 2: Flowchart Diagram --- */}
-            <div className="w-100 container px-3 py-4 mt-5 mb-4">
+            <div className="w-100 container py-4 mt-5 mb-4" style={{ paddingLeft: '8rem', paddingRight: '8rem' }}>
                 <img
                     src="/images/MediaJenie-Website-Dev-Process-Full 1.png"
                     alt="Process Flowchart"
@@ -60,14 +63,15 @@ const OfferSection = () => {
             </div>
 
             {/* --- SECTION 3: Yellow Audit Banner --- */}
-            <div className="w-100 container px-3 mb-5 mt-4">
+            <div className="w-100 container mb-5 mt-4" style={{ paddingLeft: '8rem', paddingRight: '8rem' }}>
                 <div className="row g-0 align-items-center rounded-4 position-relative overflow-hidden shadow-sm" style={{ backgroundColor: '#fde047' }}>
 
                     {/* Content Left */}
                     <div className="col-12 col-md-8 p-4 p-md-5 position-relative" style={{ zIndex: 2 }}>
                         <h2 className="fw-bold text-dark mb-4" style={{ fontSize: '2.4rem', lineHeight: '1.25', letterSpacing: '-0.02em', color: '#1f2937' }}>
-                            How we solve the problem and<br />
-                            what is our solution?
+                            Audit / Free Diagnosis / Kit:<br />
+                            Not sure if you need<br/>
+                            professional lead-gen service?
                         </h2>
 
                         <div className="text-dark mb-5" style={{ fontSize: '1.25rem', lineHeight: '1.6', color: '#374151' }}>

@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 
 const CaseCard = ({ bgImage, text }) => {
     return (
@@ -28,56 +28,17 @@ const CaseCard = ({ bgImage, text }) => {
 };
 
 const CaseSection = () => {
-    const scrollRef = useRef(null);
-
-    const scroll = (direction) => {
-        if (scrollRef.current) {
-            const scrollAmount = 340;
-            scrollRef.current.scrollBy({
-                left: direction === 'left' ? -scrollAmount : scrollAmount,
-                behavior: 'smooth'
-            });
-        }
-    };
-
     return (
-        <div className="w-100 container px-3 py-5">
-            {/* Header row with title and arrows */}
-            <div className="d-flex align-items-center justify-content-between mb-5 px-2">
+        <div className="w-100 container-fluid py-5" style={{ paddingLeft: '12.5rem', paddingRight: '0' }}>
+            {/* Header */}
+            <div className="mb-5 px-2">
                 <h2 className="fw-bold text-dark mb-0" style={{ fontSize: '2.5rem', letterSpacing: '-0.02em' }}>
                     Case Studies
                 </h2>
-
-                <div className="d-flex gap-2">
-                    <button
-                        onClick={() => scroll('left')}
-                        className="btn d-flex align-items-center justify-content-center rounded-circle border border-secondary"
-                        style={{ width: '44px', height: '44px', backgroundColor: '#fff', transition: 'all 0.2s' }}
-                        onMouseEnter={e => { e.currentTarget.style.backgroundColor = '#000'; e.currentTarget.style.borderColor = '#000'; e.currentTarget.querySelector('svg').style.stroke = '#fff'; }}
-                        onMouseLeave={e => { e.currentTarget.style.backgroundColor = '#fff'; e.currentTarget.style.borderColor = '#6c757d'; e.currentTarget.querySelector('svg').style.stroke = '#000'; }}
-                    >
-                        <svg width="18" height="18" fill="none" stroke="#000" viewBox="0 0 24 24" style={{ transition: 'stroke 0.2s' }}>
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
-                        </svg>
-                    </button>
-
-                    <button
-                        onClick={() => scroll('right')}
-                        className="btn d-flex align-items-center justify-content-center rounded-circle border border-secondary"
-                        style={{ width: '44px', height: '44px', backgroundColor: '#fff', transition: 'all 0.2s' }}
-                        onMouseEnter={e => { e.currentTarget.style.backgroundColor = '#000'; e.currentTarget.style.borderColor = '#000'; e.currentTarget.querySelector('svg').style.stroke = '#fff'; }}
-                        onMouseLeave={e => { e.currentTarget.style.backgroundColor = '#fff'; e.currentTarget.style.borderColor = '#6c757d'; e.currentTarget.querySelector('svg').style.stroke = '#000'; }}
-                    >
-                        <svg width="18" height="18" fill="none" stroke="#000" viewBox="0 0 24 24" style={{ transition: 'stroke 0.2s' }}>
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                        </svg>
-                    </button>
-                </div>
             </div>
 
             {/* Scrollable cards row */}
             <div
-                ref={scrollRef}
                 className="d-flex gap-4 overflow-auto pb-4 pt-2 custom-scrollbar w-100 px-2"
                 style={{ scrollSnapType: 'x mandatory' }}
             >

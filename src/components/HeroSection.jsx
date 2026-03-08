@@ -13,7 +13,7 @@ const HeroSection = () => {
             </header>
 
             {/* Main Content */}
-            <main className="w-100 container d-flex flex-column align-items-center justify-content-center text-center" style={{ paddingTop: '4.5rem', paddingBottom: '4.5rem' }}>
+            <main className="w-100 container d-flex flex-column align-items-center justify-content-center text-center" style={{ paddingTop: '7rem', paddingBottom: '7rem' }}>
                 <h1 className="fw-bold text-dark mb-4" style={{ fontSize: '3.5rem', lineHeight: '1.15', letterSpacing: '-0.02em' }}>
                     Hero: Frustrated with low <br className="d-none d-md-block" />
                     quality & less leads?
