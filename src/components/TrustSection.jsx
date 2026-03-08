@@ -150,7 +150,7 @@ const TrustSection = () => {
 
                 {/* 2. Fit: Our Lead-gen Service is perfect for... */}
                 <div className="w-100 p-4 p-md-5 mt-4" style={{ backgroundColor: '#f4f4f4', borderRadius: '4px' }}>
-                    <h2 className="fw-bold text-center text-dark mb-5" style={{ fontSize: '2rem', lineHeight: '1.3' }}>
+                    <h2 className="fw-bold text-center text-dark mb-5" style={{ fontSize: '2.5rem', lineHeight: '1.3' }}>
                         Fit: Our Lead-gen <br className="d-none d-sm-block" />
                         Service is perfect for...
                     </h2>
@@ -163,10 +163,10 @@ const TrustSection = () => {
 
                         {/* Left column Content */}
                         <div className="col-12 col-md-6 pe-md-5">
-                            <h4 className="fw-bold text-dark mb-3" style={{ fontSize: '1.2rem' }}>
+                            <h4 className="fw-bold text-dark mb-3" style={{ fontSize: '1.5rem' }}>
                                 Small & Medium <br /> Organizations
                             </h4>
-                            <p className="text-dark mb-0 fw-medium" style={{ fontSize: '0.95rem', color: '#444' }}>
+                            <p className="text-dark mb-0 fw-medium" style={{ fontSize: '1.15rem', color: '#444' }}>
                                 B2B or B2C businesses can use our lead-<br className="d-none d-xl-block" />
                                 gen services.
                             </p>
@@ -174,10 +174,10 @@ const TrustSection = () => {
 
                         {/* Right column Content */}
                         <div className="col-12 col-md-6 ps-md-5 mt-4 mt-md-0">
-                            <h4 className="fw-bold text-dark mb-3" style={{ fontSize: '1.2rem' }}>
+                            <h4 className="fw-bold text-dark mb-3" style={{ fontSize: '1.5rem' }}>
                                 B2B / B2C Products & Services
                             </h4>
-                            <p className="text-dark mb-0 fw-medium" style={{ fontSize: '0.95rem', color: '#444' }}>
+                            <p className="text-dark mb-0 fw-medium" style={{ fontSize: '1.15rem', color: '#444' }}>
                                 B2B or B2C businesses can use our lead-<br className="d-none d-xl-block" />
                                 gen services.
                             </p>
