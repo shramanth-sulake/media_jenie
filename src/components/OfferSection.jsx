@@ -23,12 +23,12 @@ const OfferSection = () => {
                 </div>
 
                 {/* Overlapping White Card */}
-                <div className="w-100 container position-relative" style={{ zIndex: 20, marginTop: '-8rem', paddingLeft: '8rem', paddingRight: '8rem' }}>
+                <div className="w-100 container position-relative px-desktop-8 card-overlap" style={{ zIndex: 20 }}>
                     <div className="bg-white p-4 p-md-5 border-md-0 border shadow-sm" style={{ boxShadow: '0px 15px 60px rgba(0,0,0,0.1) !important' }}>
-                        <h2 className="fw-bold text-dark mb-4" style={{ fontSize: '2.5rem', lineHeight: '1.25', letterSpacing: '-0.02em' }}>
+                        <h2 className="fw-bold text-dark mb-4 responsive-title-2" style={{ lineHeight: '1.25', letterSpacing: '-0.02em' }}>
                             Offer/ Value/ Solution: How is our <br className="d-none d-md-block" /> lead-generation service unique?
                         </h2>
-                        <div className="mb-5 text-secondary mt-4" style={{ fontSize: '1.1rem', lineHeight: '1.6', maxWidth: '500px', marginTop: '2rem' }}>
+                        <div className="mb-5 text-secondary mt-4 responsive-text" style={{ lineHeight: '1.6', maxWidth: '500px', marginTop: '2rem' }}>
                             <p className="mb-4">
                                 Most lead-gen programs focus on channels, and activities, assuming intent-of-buying.
                             </p>
@@ -53,7 +53,7 @@ const OfferSection = () => {
             </div>
 
             {/* --- SECTION 2: Flowchart Diagram --- */}
-            <div className="w-100 container py-4 mt-5 mb-4" style={{ paddingLeft: '8rem', paddingRight: '8rem' }}>
+            <div className="w-100 container py-4 mt-5 mb-4 px-desktop-8">
                 <img
                     src="/images/MediaJenie-Website-Dev-Process-Full 1.png"
                     alt="Process Flowchart"
@@ -63,18 +63,18 @@ const OfferSection = () => {
             </div>
 
             {/* --- SECTION 3: Yellow Audit Banner --- */}
-            <div className="w-100 container mb-5 mt-4" style={{ paddingLeft: '8rem', paddingRight: '8rem' }}>
+            <div className="w-100 container mb-5 mt-4 px-desktop-8">
                 <div className="row g-0 align-items-center rounded-4 position-relative overflow-hidden shadow-sm" style={{ backgroundColor: '#fde047' }}>
 
                     {/* Content Left */}
                     <div className="col-12 col-md-8 p-4 p-md-5 position-relative" style={{ zIndex: 2 }}>
-                        <h2 className="fw-bold text-dark mb-4" style={{ fontSize: '2.4rem', lineHeight: '1.25', letterSpacing: '-0.02em', color: '#1f2937' }}>
+                        <h2 className="fw-bold text-dark mb-4 responsive-title-2" style={{ lineHeight: '1.25', letterSpacing: '-0.02em', color: '#1f2937' }}>
                             Audit / Free Diagnosis / Kit:<br />
-                            Not sure if you need<br/>
+                            Not sure if you need<br />
                             professional lead-gen service?
                         </h2>
 
-                        <div className="text-dark mb-5" style={{ fontSize: '1.25rem', lineHeight: '1.6', color: '#374151' }}>
+                        <div className="text-dark mb-5 responsive-text" style={{ lineHeight: '1.6', color: '#374151' }}>
                             <p className="mb-2 pe-md-5">Take this quick audit and<br className="d-none d-sm-block" /> we'll show you.</p>
                             <ul className="mb-0 ps-3" style={{ listStyleType: 'disc' }}>
                                 <li className="mb-2">It's completely free</li>

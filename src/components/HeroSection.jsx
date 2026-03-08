@@ -13,13 +13,13 @@ const HeroSection = () => {
             </header>
 
             {/* Main Content */}
-            <main className="w-100 container d-flex flex-column align-items-center justify-content-center text-center" style={{ paddingTop: '7rem', paddingBottom: '7rem' }}>
-                <h1 className="fw-bold text-dark mb-4" style={{ fontSize: '3.5rem', lineHeight: '1.15', letterSpacing: '-0.02em' }}>
+            <main className="w-100 container d-flex flex-column align-items-center justify-content-center text-center hero-padding">
+                <h1 className="fw-bold text-dark mb-4 responsive-title-1" style={{ lineHeight: '1.15', letterSpacing: '-0.02em' }}>
                     Hero: Frustrated with low <br className="d-none d-md-block" />
                     quality & less leads?
                 </h1>
 
-                <p className="mb-5" style={{ fontSize: '1.5rem', color: '#4b5563', maxWidth: '850px', lineHeight: '1.6' }}>
+                <p className="mb-5 responsive-subtitle" style={{ color: '#4b5563', maxWidth: '850px', lineHeight: '1.6' }}>
                     Explanation Block: We help organizations <strong className="fw-semibold text-dark">generate predictable <br className="d-none d-md-block" />
                         leads</strong> through our Proprietary <strong className="fw-semibold text-dark">Decision-Science Framework</strong>
                 </p>

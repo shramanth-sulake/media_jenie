@@ -29,10 +29,10 @@ const CaseCard = ({ bgImage, text }) => {
 
 const CaseSection = () => {
     return (
-        <div className="w-100 container-fluid py-5" style={{ paddingLeft: '12.5rem', paddingRight: '0' }}>
+        <div className="w-100 container-fluid py-5 pl-desktop-8 pe-0">
             {/* Header */}
             <div className="mb-5 px-2">
-                <h2 className="fw-bold text-dark mb-0" style={{ fontSize: '2.5rem', letterSpacing: '-0.02em' }}>
+                <h2 className="fw-bold text-dark mb-0 responsive-title-2" style={{ letterSpacing: '-0.02em' }}>
                     Case Studies
                 </h2>
             </div>

@@ -30,7 +30,7 @@ const TrustSection = () => {
 
             {/* Header */}
             <div className="container px-4 text-center text-md-start mb-4" style={{ maxWidth: '1000px' }}>
-                <h2 className="fw-bold text-dark" style={{ fontSize: '2rem', color: '#2b2b2b' }}>
+                <h2 className="fw-bold text-dark" style={{ fontSize: 'clamp(2rem, 4.5vw, 2.5rem)', color: '#2b2b2b' }}>
                     Trust: Highly Rated
                 </h2>
             </div>
@@ -66,14 +66,14 @@ const TrustSection = () => {
 
                 {/* 1. Clients Speak */}
                 <div className="mb-5 pb-5">
-                    <h3 className="fw-bold mb-4" style={{ fontSize: '1.4rem', color: '#6c757d' }}>Clients Speak</h3>
+                    <h3 className="fw-bold mb-4" style={{ fontSize: 'clamp(1.4rem, 3vw, 1.8rem)', color: '#6c757d' }}>Clients Speak</h3>
 
                     <div className="row g-4 align-items-center mt-3">
                         {/* Quote + Navigation */}
                         <div className="col-12 col-md-7 pe-md-5">
                             <p
                                 className="fw-medium mb-4"
-                                style={{ fontSize: '1.05rem', color: '#444', lineHeight: '1.6', minHeight: '120px', transition: 'opacity 0.3s ease' }}
+                                style={{ fontSize: 'clamp(1.05rem, 2.5vw, 1.25rem)', color: '#444', lineHeight: '1.6', minHeight: '120px', transition: 'opacity 0.3s ease' }}
                             >
                                 {t.quote}
                             </p>
@@ -136,8 +136,8 @@ const TrustSection = () => {
                                     style={{ width: '64px', height: '64px', objectFit: 'cover', flexShrink: 0 }}
                                 />
                                 <div>
-                                    <h5 className="fw-bold mb-1 text-dark" style={{ fontSize: '1rem' }}>{t.name}</h5>
-                                    <p className="text-secondary mb-0 fst-italic" style={{ fontSize: '0.85rem', lineHeight: '1.3' }}>
+                                    <h5 className="fw-bold mb-1 text-dark" style={{ fontSize: 'clamp(1rem, 2.5vw, 1.15rem)' }}>{t.name}</h5>
+                                    <p className="text-secondary mb-0 fst-italic" style={{ fontSize: 'clamp(0.85rem, 2vw, 1rem)', lineHeight: '1.3' }}>
                                         {t.title}<br />
                                         <span style={{ fontStyle: 'normal' }}>{t.org}</span>
                                     </p>
@@ -150,7 +150,7 @@ const TrustSection = () => {
 
                 {/* 2. Fit: Our Lead-gen Service is perfect for... */}
                 <div className="w-100 p-4 p-md-5 mt-4" style={{ backgroundColor: '#f4f4f4', borderRadius: '4px' }}>
-                    <h2 className="fw-bold text-center text-dark mb-5" style={{ fontSize: '2.5rem', lineHeight: '1.3' }}>
+                    <h2 className="fw-bold text-center text-dark mb-5" style={{ fontSize: 'clamp(2rem, 5vw, 2.5rem)', lineHeight: '1.3' }}>
                         Fit: Our Lead-gen <br className="d-none d-sm-block" />
                         Service is perfect for...
                     </h2>
@@ -163,10 +163,10 @@ const TrustSection = () => {
 
                         {/* Left column Content */}
                         <div className="col-12 col-md-6 pe-md-5">
-                            <h4 className="fw-bold text-dark mb-3" style={{ fontSize: '1.5rem' }}>
+                            <h4 className="fw-bold text-dark mb-3" style={{ fontSize: 'clamp(1.2rem, 3vw, 1.5rem)' }}>
                                 Small & Medium <br /> Organizations
                             </h4>
-                            <p className="text-dark mb-0 fw-medium" style={{ fontSize: '1.15rem', color: '#444' }}>
+                            <p className="text-dark mb-0 fw-medium" style={{ fontSize: 'clamp(1rem, 2.5vw, 1.15rem)', color: '#444' }}>
                                 B2B or B2C businesses can use our lead-<br className="d-none d-xl-block" />
                                 gen services.
                             </p>
@@ -174,10 +174,10 @@ const TrustSection = () => {
 
                         {/* Right column Content */}
                         <div className="col-12 col-md-6 ps-md-5 mt-4 mt-md-0">
-                            <h4 className="fw-bold text-dark mb-3" style={{ fontSize: '1.5rem' }}>
+                            <h4 className="fw-bold text-dark mb-3" style={{ fontSize: 'clamp(1.2rem, 3vw, 1.5rem)' }}>
                                 B2B / B2C Products & Services
                             </h4>
-                            <p className="text-dark mb-0 fw-medium" style={{ fontSize: '1.15rem', color: '#444' }}>
+                            <p className="text-dark mb-0 fw-medium" style={{ fontSize: 'clamp(1rem, 2.5vw, 1.15rem)', color: '#444' }}>
                                 B2B or B2C businesses can use our lead-<br className="d-none d-xl-block" />
                                 gen services.
                             </p>
